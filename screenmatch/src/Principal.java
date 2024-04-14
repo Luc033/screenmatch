@@ -44,7 +44,50 @@ public class Principal {
         System.out.println(filme1.totalDeAvaliacoes);
         System.out.printf("Sendo a média de avaliações: ", filme1.pegaMedia());
         System.out.println(filme1.pegaMedia());
+        System.out.println("=================================================");
 
+        // EX 1 CLASSE PESSOA
+        Pessoa pessoa1 = new Pessoa();
+        pessoa1.helloWorld();
+        System.out.println("=================================================");
 
+        // EX 2 - CLASSE CALCULADORA
+        Calculadora num1 = new Calculadora();
+        System.out.println("O dobro é: "+num1.retornaDobro(2));
+        System.out.println("=================================================");
+
+        // EX 3 - CLASSE MUSICA
+        Musica musica1 = new Musica();
+        musica1.titulo = "The Trooper";
+        musica1.artista = "Iron Maiden";
+        musica1.anoLancamento = 1985;
+
+        musica1.avaliarMusica(8);
+        musica1.avaliarMusica(6);
+        musica1.avaliarMusica(9);
+        musica1.avaliarMusica(9);
+        musica1.avaliarMusica(10);
+        musica1.avaliarMusica(8);
+
+        System.out.printf("Música: %s\nArtista: %s\nAno: %d\n", musica1.titulo, musica1.artista, musica1.anoLancamento);
+        System.out.printf("Total de avaliações: %.0f\nMédia de avaliações: %.1f\n", musica1.avaliacao, musica1.mediaMusica());
+
+        //EX 4 - CLASSE CARRO
+        System.out.println("=================================================");
+        Carro carro1 = new Carro();
+        carro1.modelo = "gol";
+        carro1.ano = 2005;
+        carro1.cor = "vermelho";
+
+        carro1.exibirFicha();
+        System.out.printf("Idade do carro: %d anos\n", carro1.idadeCarro());
+
+        // EX 5 - CLASSE ALUNO
+        System.out.println("=================================================");
+        Aluno aluno1 = new Aluno();
+        aluno1.nome = "Jorgin Fogueteiro";
+        aluno1.idade = 14;
+
+        aluno1.exibirInfo();
     }
 }
