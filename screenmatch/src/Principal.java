@@ -1,9 +1,11 @@
+import br.com.alura.screenmatch.modelos.Filme;
+
 public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme();
-        meuFilme.nome = "Vingadores";
-        meuFilme.anoDeLancamento = 2012;
-        meuFilme.duracaoEmMinutos = 180;
+        meuFilme.setNome("Vingadores");
+        meuFilme.setAnoDeLancamento(2012);
+        meuFilme.setDuracaoEmMinutos(180);
 
          meuFilme.exibeFichaTecnica();
          meuFilme.avalia(8);
@@ -38,8 +40,7 @@ public class Principal {
         filme1.avalia(7.9);
         filme1.avalia(7);
         filme1.exibeFichaTecnica();
-        System.out.printf("A soma das avaliações: ", filme1.somaDasAvaliacoes);
-        System.out.println(filme1.somaDasAvaliacoes);
+
         System.out.printf("Total de pessoas que avaliaram: ", filme1.totalDeAvaliacoes);
         System.out.println(filme1.totalDeAvaliacoes);
         System.out.printf("Sendo a média de avaliações: ", filme1.pegaMedia());
