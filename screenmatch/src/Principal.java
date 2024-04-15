@@ -1,5 +1,7 @@
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.ContaBancaria;
+import br.com.alura.screenmatch.modelos.IdadePessoa;
+import br.com.alura.screenmatch.modelos.Produto;
 
 
 public class Principal {
@@ -103,7 +105,24 @@ public class Principal {
         conta1.setSaldo(1000);
         System.out.printf("Nome do titular: %s\nNúmero da conta: %d\nAgência: %d\nSaldo: R$%.2f", conta1.titular, conta1.getNumeroConta(), conta1.getAgencia(), conta1.getSaldo(), conta1.getSaldo());
 
-        
+        //EX2 - CLASSE IDADEPESSOA
+        System.out.println("\n=================================================");
+        IdadePessoa idadePessoa1 = new IdadePessoa();
+        idadePessoa1.setNomme("Lucas Melo");
+        idadePessoa1.setIdade(23);
+        idadePessoa1.verificaIdade();
+
+        //EX3 - CLASSE PRODUTO
+        System.out.println("\n=================================================");
+        Produto feijao = new Produto();
+        feijao.setNome("Feijão Carioca");
+        feijao.setPreco(45);
+        feijao.getPreco();
+        System.out.println(feijao.getNome());;
+        System.out.println(feijao.getPreco());
+        feijao.aplicarDesconto(0.25);
+        System.out.println("Preço com desconto: "+feijao.getPreco());
+
 
     }
 }
