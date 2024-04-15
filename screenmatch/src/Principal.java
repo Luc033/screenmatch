@@ -1,4 +1,6 @@
 import br.com.alura.screenmatch.modelos.Filme;
+import br.com.alura.screenmatch.modelos.ContaBancaria;
+
 
 public class Principal {
     public static void main(String[] args) {
@@ -13,16 +15,16 @@ public class Principal {
          meuFilme.avalia(9);
          meuFilme.avalia(4);
 
-        System.out.println(meuFilme.somaDasAvaliacoes);
-        System.out.println(meuFilme.totalDeAvaliacoes);
+        //System.out.println(meuFilme.somaDasAvaliacoes);
+        //System.out.println(meuFilme.totalDeAvaliacoes);
         System.out.println(meuFilme.pegaMedia());
 
         // NOVO OBJETO
         System.out.println("========================================");
         Filme filme1 = new Filme();
-        filme1.nome = "Harry Potter e a Pedra Filosofal";
-        filme1.anoDeLancamento = 2002;
-        filme1.duracaoEmMinutos = 120;
+        filme1.setNome("Harry Potter e a Pedra Filosofal");
+        filme1.setAnoDeLancamento(2002);
+        filme1.setDuracaoEmMinutos(120);
 
         filme1.avalia(7);
         filme1.avalia(7);
@@ -41,8 +43,8 @@ public class Principal {
         filme1.avalia(7);
         filme1.exibeFichaTecnica();
 
-        System.out.printf("Total de pessoas que avaliaram: ", filme1.totalDeAvaliacoes);
-        System.out.println(filme1.totalDeAvaliacoes);
+        //System.out.printf("Total de pessoas que avaliaram: ", filme1.totalDeAvaliacoes);
+        //System.out.println(filme1.totalDeAvaliacoes);
         System.out.printf("Sendo a média de avaliações: ", filme1.pegaMedia());
         System.out.println(filme1.pegaMedia());
         System.out.println("=================================================");
@@ -90,5 +92,18 @@ public class Principal {
         aluno1.idade = 14;
 
         aluno1.exibirInfo();
+
+        // AULA 2
+        // EX 1 - CLASSE CONTABANCARIA
+        System.out.println("=================================================");
+        ContaBancaria conta1 = new ContaBancaria();
+        conta1.titular = "Lucas Melo";
+        conta1.setNumeroConta(1234);
+        conta1.setAgencia(3);
+        conta1.setSaldo(1000);
+        System.out.printf("Nome do titular: %s\nNúmero da conta: %d\nAgência: %d\nSaldo: R$%.2f", conta1.titular, conta1.getNumeroConta(), conta1.getAgencia(), conta1.getSaldo(), conta1.getSaldo());
+
+        
+
     }
 }
