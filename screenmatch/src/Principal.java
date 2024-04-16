@@ -1,7 +1,5 @@
-import br.com.alura.screenmatch.modelos.Filme;
-import br.com.alura.screenmatch.modelos.ContaBancaria;
-import br.com.alura.screenmatch.modelos.IdadePessoa;
-import br.com.alura.screenmatch.modelos.Produto;
+import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
+import br.com.alura.screenmatch.modelos.*;
 
 
 public class Principal {
@@ -20,6 +18,11 @@ public class Principal {
         //System.out.println(meuFilme.somaDasAvaliacoes);
         //System.out.println(meuFilme.totalDeAvaliacoes);
         System.out.println(meuFilme.pegaMedia());
+
+        Filme filme2 = new Filme();
+        filme2.setNome("Harry Potter e a Câmara Secreta");
+        filme2.setAnoDeLancamento(2004);
+        filme2.setDuracaoEmMinutos(150);
 
         // NOVO OBJETO
         System.out.println("========================================");
@@ -80,12 +83,12 @@ public class Principal {
         //EX 4 - CLASSE CARRO
         System.out.println("=================================================");
         Carro carro1 = new Carro();
-        carro1.modelo = "gol";
-        carro1.ano = 2005;
-        carro1.cor = "vermelho";
+        carro1.setNomeModelo("gol");
+        carro1.setAno(2005);
+        carro1.setCor("vermelho");
 
-        carro1.exibirFicha();
-        System.out.printf("Idade do carro: %d anos\n", carro1.idadeCarro());
+        //carro1.exibirFicha();
+        //System.out.printf("Idade do carro: %d anos\n", carro1.idadeCarro());
 
         // EX 5 - CLASSE ALUNO
         System.out.println("=================================================");
@@ -123,6 +126,34 @@ public class Principal {
         feijao.aplicarDesconto(0.25);
         System.out.println("Preço com desconto: "+feijao.getPreco());
 
+        // AULA 3
+        System.out.println("\n=================================================");
+        Serie breakingBad = new Serie();
+        breakingBad.setNome("Breaking Bad");
+        breakingBad.setTemporadas(3);
+        breakingBad.setAnoDeLancamento(2012);
+        breakingBad.setMinutosPorEpisodio(60);
+        breakingBad.setEpisodiosPorTemporada(12);
+        breakingBad.setIncluidoNoPlano(true);
+        breakingBad.exibeFichaTecnica();
+        System.out.println("Duração total: "+breakingBad.getDuracaoEmMinutos());
+
+        System.out.println("\n=================================================");
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(filme1);
+        calculadora.inclui(filme2);
+        calculadora.inclui(breakingBad);
+        System.out.println(calculadora.getTempoTotal());
+
+        //EX 1 - CLASSE CARRO [GIVEI]
+        // EX 2 - CLASSE ANIMAL
+        System.out.println("\n=================================================");
+        Cachorro cachorro = new Cachorro();
+        cachorro.emitirSom();
+        cachorro.abanarRabo();
+        Gato gato = new Gato();
+        gato.emitirSom();
+        gato.arranharMoveis();
 
     }
 }
