@@ -81,11 +81,13 @@ public class Principal {
         System.out.printf("Total de avaliações: %.0f\nMédia de avaliações: %.1f\n", musica1.avaliacao, musica1.mediaMusica());
 
         //EX 4 - CLASSE CARRO
+        /*
         System.out.println("=================================================");
         Carro carro1 = new Carro();
         carro1.setNomeModelo("gol");
         carro1.setAno(2005);
         carro1.setCor("vermelho");
+         */
 
         //carro1.exibirFicha();
         //System.out.printf("Idade do carro: %d anos\n", carro1.idadeCarro());
@@ -145,7 +147,15 @@ public class Principal {
         calculadora.inclui(breakingBad);
         System.out.println(calculadora.getTempoTotal());
 
-        //EX 1 - CLASSE CARRO [GIVEI]
+        //EX 1 - CLASSE CARRO
+        System.out.println("\n=================================================");
+        Carro carro = new Carro();
+        carro.setNomeModelo("Celta");
+        carro.setPrecoAno1(45550);
+        carro.setPrecoAno2(49586);
+        carro.setPrecoAno3(55345);
+        carro.exibirInfo();
+
         // EX 2 - CLASSE ANIMAL
         System.out.println("\n=================================================");
         Cachorro cachorro = new Cachorro();
