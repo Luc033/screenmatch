@@ -1,4 +1,5 @@
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
+import br.com.alura.screenmatch.calculos.ConversaoFinanceira;
 import br.com.alura.screenmatch.modelos.*;
 
 
@@ -147,6 +148,21 @@ public class Principal {
         calculadora.inclui(breakingBad);
         System.out.println(calculadora.getTempoTotal());
 
+        //  AULA 4
+        System.out.println("\n======================AULA 4===========================");
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        System.out.printf("Classificação: %d \n",filme1.getClassificacao());
+        filtro.filtra(filme1);
+
+        System.out.println("\n=================================================");
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setSerie(breakingBad);
+        episodio.setTotalVisualizacoes(500);
+        filtro.filtra(episodio);
+
+
+        /*
         //EX 1 - CLASSE CARRO
         System.out.println("\n=================================================");
         Carro carro = new Carro();
@@ -164,6 +180,47 @@ public class Principal {
         Gato gato = new Gato();
         gato.emitirSom();
         gato.arranharMoveis();
+         */
+        System.out.println("\n=================================================");
 
+        // EX - CONVERSOR DE MOED
+
+        ConversorMoeda conversao = new ConversorMoeda();
+        conversao.setValor(564.45);
+        System.out.println("Conversao de $"+conversao.getValor()+" dolares para reais eh igual a R$"+conversao.converterDolarParaReal());
+
+        // FAZER - EX CalculadoraSalaRetangular
+        System.out.println("\n=================================================");
+        /*
+        Crie uma classe CalculadoraSalaRetangular que implementa uma interface CalculoGeometrico
+        com os métodos calcularArea() e calcularPerimetro() para calcular a área e o perímetro de uma sala retangular.
+        A classe deve receber altura e largura como parâmetros.
+         */
+
+        // FAZER - EX CalculadoraSalaRetangular
+        System.out.println("\n=================================================");
+        /*
+        Crie uma classe TabuadaMultiplicacao que implementa uma interface Tabuada com o método mostrarTabuada() para exibir a tabuada de um número. A classe deve receber o número como parâmetro.
+         */
+
+        // FAZER - EX ConversorTemperatura
+        System.out.println("\n=================================================");
+
+        /*
+        Crie uma interface ConversorTemperatura com os métodos celsiusParaFahrenheit() e fahrenheitParaCelsius(). Implemente uma classe ConversorTemperaturaPadrao que implementa essa interface com as fórmulas de conversão e exibe os resultados.
+         */
+
+        // FAZER - EX interface Calculavel
+        System.out.println("\n=================================================");
+        /*
+        Crie uma interface Calculavel com um método double calcularPrecoFinal(). Implemente essa interface nas classes Livro e ProdutoFisico, cada uma retornando o preço final considerando descontos ou taxas adicionais.
+         */
+
+
+        // FAZER - EX interface Vendavel
+        System.out.println("\n=================================================");
+        /*
+        Crie uma interface Vendavel com métodos para calcular o preço total de um produto com base na quantidade comprada e aplicar descontos. Implemente essa interface nas classes Produto e Servico, cada uma fornecendo a sua própria lógica de cálculo de preço.
+         */
     }
 }
